@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado Peinados</title>
+</head>
+<body>
+    <form action="/aplicacion/buscar_peinado" method="get">
+        {% csrf_token %}
+        <h2> Buscador por Nombre del Peinado</h2>
+        <input type="text" name="nombre" id="nombre">
+        <input type="submit" value="Buscar">
+    </form>
+</body>
+</html>

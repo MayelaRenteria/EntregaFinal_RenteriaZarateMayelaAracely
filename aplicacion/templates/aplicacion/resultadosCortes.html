@@ -1,0 +1,27 @@
+{% extends 'aplicacion/base.html' %}
+{% load static %}
+
+{% block cabecera %}
+Cortes Infantiles 
+{% endblock cabecera %}
+    
+{% block contenido %}
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Precio</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for corte in cortes %}
+        <tr>
+            <td>{{ corte.id }}</td>
+            <td>{{ corte.nombre }}</td>
+            <td>{{ corte.precio }}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock contenido %} 

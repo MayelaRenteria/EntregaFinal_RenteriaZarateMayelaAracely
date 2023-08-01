@@ -1,0 +1,30 @@
+{% extends 'aplicacion/base.html' %}
+{% load static %}
+
+{% block cabecera %}
+
+Peinados Infantiles {{precio}}
+
+{% endblock cabecera %}
+    
+{% block contenido %}
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Precio</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for peinado in peinados %}
+        <tr>
+            <td>{{ peinado.id }}</td>
+            <td>{{ peinado.nombre }}</td>
+            <td>{{ peinado.precio }}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock contenido %} 
+

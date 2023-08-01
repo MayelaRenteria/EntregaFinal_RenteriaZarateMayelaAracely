@@ -1,0 +1,58 @@
+{% extends 'aplicacion/base.html' %}
+{% load static %}
+
+
+{% block titulo %}
+    Cortes
+{% endblock titulo %}
+
+
+<style>
+    .icon-header {
+        display: flex;
+        align-items: center;
+    }
+
+    .icon-header img {
+        width: 30px;
+        margin-right: 10px;
+    }
+</style>
+
+{% block cabecera %}
+    <h1 class="icon-header">
+        Listado de Cortes <img src="{% static 'aplicacion/assets/img/icono.jpg' %}" alt="Ícono" style="opacity: 0.6;"> 
+    </h1>
+{% endblock cabecera %}
+    
+{% block contenido %}
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Precio*</th>
+            <th>Duración (minutos)</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for corte in cortes %}
+    <tr>
+        <td>{{ corte.id }}</td>
+        <td>{{ corte.nombre }}</td>
+        <td>{{ corte.precio }}</td>
+        <td>{{ corte.duracion_minutos }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+<tr>
+    <td><strong>* Nuestros precios están expresados en pesos mexicanos.</strong></td>
+</tr>
+{% endblock contenido %}
+
+
+
+
+
+    

@@ -1,0 +1,29 @@
+{% extends 'aplicacion/base.html' %}
+{% load static %}
+
+{% block cabecera %}
+
+Estilistas Infantiles
+
+{% endblock cabecera %}
+    
+{% block contenido %}
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Especialidad</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for estilista in estilistas %}
+        <tr>
+            <td>{{ estilista.id }}</td>
+            <td>{{ estilista.nombre }}</td>
+            <td>{{ estilista.especialidad }}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock contenido %} 

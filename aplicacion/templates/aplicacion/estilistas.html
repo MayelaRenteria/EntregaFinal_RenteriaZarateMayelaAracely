@@ -1,0 +1,49 @@
+{% extends 'aplicacion/base.html' %}
+{% load static %}
+
+
+{% block titulo %}
+    Estilistas
+{% endblock titulo %}
+
+<style>
+    .icon-header {
+        display: flex;
+        align-items: center;
+    }
+
+    .icon-header img {
+        width: 30px;
+        margin-right: 10px;
+    }
+</style>
+
+{% block cabecera %}
+    <h1 class="icon-header">
+        Listado de Estilistas <img src="{% static 'aplicacion/assets/img/icono3.jpg' %}" alt="Ícono" style="opacity: 0.6;"> 
+    </h1>
+{% endblock cabecera %}
+
+{% block contenido %}
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Especialidad</th>
+            <th>Antiguedad (años)</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for estilista in estilistas %}
+    <tr>
+        <td>{{ estilista.id }}</td>
+        <td>{{ estilista.nombre }}</td>
+        <td>{{ estilista.especialidad }}</td>
+        <td>{{ estilista.experiencia_anios }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock contenido %}
+
