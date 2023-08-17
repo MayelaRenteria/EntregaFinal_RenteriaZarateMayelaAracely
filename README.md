@@ -1,4 +1,4 @@
-# Tercera_PreEntrega_RenteriaZarateMayelaAracely
+EntregaFinal_RenteriaZarateMayelaAracely
 
 Estetica Infantil - Pretty Awesome se muestra en el proyecto una landing page para consultar los servicios que se ofrecen en la estetica y conocer al personal.
 
